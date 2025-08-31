@@ -273,6 +273,8 @@ function validateForm(form) {
 }
 
 // Add parallax effect to hero section
+// Remove this entire block:
+/*
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const hero = document.querySelector('.hero');
@@ -281,6 +283,7 @@ window.addEventListener('scroll', () => {
         hero.style.transform = `translateY(${rate}px)`;
     }
 });
+*/
 
 // Add counter animation for statistics (if needed)
 function animateCounter(element, target, duration = 2000) {
