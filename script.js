@@ -131,7 +131,8 @@ function revealText(element) {
         span.style.opacity = '0';
         span.style.transform = 'translateY(20px)';
         span.style.transition = 'opacity 0.1s ease, transform 0.1s ease';
-        span.style.display = 'inline-block';
+        // Change from inline-block to inline to preserve word spacing
+        span.style.display = 'inline';
         element.appendChild(span);
         
         setTimeout(() => {
