@@ -425,3 +425,27 @@ window.addEventListener('scroll', () => {
         }
     }
 });
+
+// View project functionality
+function viewProject(projectId) {
+    // You can customize this function based on what you want to happen when the button is clicked
+    switch(projectId) {
+        case 'belica-fuel':
+            // Open in new tab, show modal, or navigate to project page
+            window.open('https://belicafuel.com', '_blank'); // Replace with actual project URL
+            break;
+        default:
+            console.log('Project not found:', projectId);
+    }
+}
+
+// Add click effect to project buttons
+document.querySelectorAll('.view-project-btn').forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.stopPropagation(); // Prevent card click event
+        this.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+            this.style.transform = 'scale(1)';
+        }, 150);
+    });
+});
